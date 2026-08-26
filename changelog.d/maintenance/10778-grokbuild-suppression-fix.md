@@ -1,0 +1,1 @@
+- fix(quality): register GrokBuildToolCard.tsx react-hooks/set-state-in-effect suppression (dropped in #10778's uncommitted fix)

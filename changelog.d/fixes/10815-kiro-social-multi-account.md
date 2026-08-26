@@ -1,0 +1,1 @@
+- fix(oauth): stop treating the Kiro profile ARN as an account identity in `findKiroConnectionByIdentity()`, so a second Google/GitHub social login creates a new connection instead of overwriting the first — distinct Builder ID accounts share the same CodeWhisperer profile ARN, and the social token is not a JWT, so no e-mail was available to disambiguate them (#10815)

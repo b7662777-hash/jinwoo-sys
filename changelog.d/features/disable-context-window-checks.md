@@ -1,0 +1,1 @@
+- feat(routing): add the default-off `DISABLE_CONTEXT_WINDOW_CHECKS` feature flag to let operators bypass OmniRoute's local context-window and max-input-token check for direct single-model requests, leaving upstream limits, prompt compression, and output-token caps intact.

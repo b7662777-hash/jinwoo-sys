@@ -1,0 +1,1 @@
+- **fix(electron):** desktop window stays hidden on Windows because the embedded Next.js server binds to the machine hostname instead of loopback ([#PENDING](https://github.com/diegosouzapw/OmniRoute/pull/PENDING))

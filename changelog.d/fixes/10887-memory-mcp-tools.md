@@ -1,0 +1,1 @@
+- **fix(memory):** enable agent memory save/update via MCP tools (`memory_save`/`update`/`search`/`delete` builtins with per-provider schemas, `apiKeyId` optional with caller-principal fallback) and gate server-side memory builtin injection to non-stream requests only ([#10887](https://github.com/diegosouzapw/OmniRoute/pull/10887)) — thanks @Egorich-print

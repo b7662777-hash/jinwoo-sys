@@ -1,0 +1,1 @@
+- **fix(provider-health):** Keep unsupported 404/405 validation probes neutral so they do not poison stored credential health or scheduler failure state, while still honoring per-connection health-check pacing ([#10878](https://github.com/diegosouzapw/OmniRoute/pull/10878)) — thanks @Zartharas

@@ -1,0 +1,1 @@
+- fix(db): filter `getProviderMetrics()` to providers with a live `provider_connections` row so a deleted provider stops permanently ghost-haunting the Home "Provider Topology" widget (#10714)

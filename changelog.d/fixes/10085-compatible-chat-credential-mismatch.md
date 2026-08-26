@@ -1,0 +1,1 @@
+- fix(sse): bridge generic openai-compatible/anthropic-compatible provider type ids to their concrete uuid node id in credential lookup (#10085)

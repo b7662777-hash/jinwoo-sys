@@ -1,0 +1,1 @@
+- fix(api): hash the API key before using it as the model-catalog cache Map key (no raw credentials in process heap) (#10313)

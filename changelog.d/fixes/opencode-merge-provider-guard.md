@@ -1,0 +1,1 @@
+- **OpenCode config merge:** stop `mergeOpenCodeConfig` splaying a malformed `provider` block into index keys. The root was already guarded against a non-object; the `provider` branch it spreads one level down was not, so an existing `"provider": ["a", "b"]` merged to `{"0": "a", "1": "b", …}`. Its sibling `mergeOpenCodeConfigText` already refuses the same input.

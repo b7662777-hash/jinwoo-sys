@@ -1,0 +1,1 @@
+- chore(startup): remove `src/server-init.ts` (183 lines, never imported — the boot path is `src/instrumentation-node.ts`) and correct four `"called from server-init.ts"` comments left pointing at the dead entry point (#10780)

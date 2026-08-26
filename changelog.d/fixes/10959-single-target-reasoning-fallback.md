@@ -1,0 +1,1 @@
+- fix(sse): default single-target incompatible reasoning to drop for agentic replay — single-target requests to opaque reasoning targets now gracefully strip incompatible plaintext reasoning history instead of returning HTTP 400, matching combo default behavior while preserving operator and per-request overrides ([#10959](https://github.com/diegosouzapw/OmniRoute/issues/10959))

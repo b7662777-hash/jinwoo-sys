@@ -1,0 +1,1 @@
+- **fix(providers):** route terminal `testStatus` writes (`banned`, `deactivated`, `credits_exhausted`) through a single origin-aware passage — probe failures are recorded but never deactivate the connection ([#11009](https://github.com/diegosouzapw/OmniRoute/pull/11009)) — thanks @maxmad64bis

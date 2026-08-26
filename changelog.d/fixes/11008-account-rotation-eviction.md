@@ -1,0 +1,1 @@
+- **fix(accounts):** `markCooldown` now carries the failure origin (`transient` vs `terminal`) — transient 429/network only cools down, repeated terminal failures evict and are skipped by `pickAccount` until a success or operator clear ([#11008](https://github.com/diegosouzapw/OmniRoute/pull/11008)) — thanks @maxmad64bis

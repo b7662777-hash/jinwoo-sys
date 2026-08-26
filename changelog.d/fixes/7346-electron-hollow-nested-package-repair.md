@@ -1,0 +1,1 @@
+- fix(cli): repair hollow externalized package dirs in the nested `<distDir>/node_modules` bundle location too, not just the top-level one, fixing macOS/Linux Electron `ERR_MODULE_NOT_FOUND` on Turbopack-externalized packages (#7346)

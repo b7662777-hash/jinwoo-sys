@@ -1,0 +1,1 @@
+- **docs(database):** align the SQLite cache guide with the 65,536 KiB runtime default, supported 1–1,000,000 KiB range, and live Settings application behavior ([#11018](https://github.com/diegosouzapw/OmniRoute/issues/11018))

@@ -1,0 +1,1 @@
+- **docs(ops):** document Kubernetes probe recommendations — TCP (or soft HTTP) liveness, HTTP `/healthz` readiness, avoid `/api/monitoring/health` as kubelet liveness ([#10297](https://github.com/diegosouzapw/OmniRoute/pull/10297)) — thanks @RaviTharuma

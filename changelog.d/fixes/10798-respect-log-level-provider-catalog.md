@@ -1,0 +1,1 @@
+- **fix(opencode-plugin):** respect log level in provider.models() catalog path so debug/info/warn messages are suppressed when `features.logLevel` is set to `"error"` ([#10798](https://github.com/diegosouzapw/OmniRoute/pull/10798)) — thanks @tientien17

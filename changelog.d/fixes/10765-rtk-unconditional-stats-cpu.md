@@ -1,0 +1,1 @@
+- fix(compression): skip the expensive `createCompressionStats()` pass in RTK when no message was actually compressed, matching every sibling stacked engine (#10765)

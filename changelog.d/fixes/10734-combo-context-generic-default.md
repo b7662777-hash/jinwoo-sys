@@ -1,0 +1,1 @@
+- **fix(catalog):** stop counting `getTokenLimit()`'s generic 128k catch-all as a known combo window, so `/v1/models` advertises the min of sourced member contexts instead of collapsing a 500k combo to 128k ([#10734](https://github.com/diegosouzapw/OmniRoute/issues/10734))

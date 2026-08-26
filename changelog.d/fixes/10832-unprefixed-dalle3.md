@@ -1,0 +1,1 @@
+- **fix(images):** register OpenAI `dall-e-3` in the image registry so unprefixed `dall-e-3` (and `openai/dall-e-3`) route to OpenAI Images instead of Microsoft Designer Web, and so the chat catalog no longer lists `openai/dall-e-3` as a 128k chat model ([#10832](https://github.com/diegosouzapw/OmniRoute/issues/10832))

@@ -1,0 +1,1 @@
+- **fix(cline):** Preserve client-supplied Cline task IDs and omit the header when clients provide none, preventing request-scoped proxy IDs from being reported as tasks.

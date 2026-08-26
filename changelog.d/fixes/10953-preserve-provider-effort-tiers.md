@@ -1,0 +1,1 @@
+- **fix(catalog):** preserve provider-declared reasoning effort tiers instead of replacing them with generic defaults ([#10953](https://github.com/diegosouzapw/OmniRoute/pull/10953)) — thanks @xz-dev

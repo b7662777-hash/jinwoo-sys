@@ -1,0 +1,2 @@
+- fix(sse): combo diagnostics no longer truncate `exhausted_connection` entries to a hardcoded `provider: "unknown"` with the provider prefix eaten by an 8-char slice — the real provider id is preserved and only the connection id is truncated (#10967)
+- fix(sse): combo terminal failures caused entirely by quota/account-balance exhaustion (including a durable HTTP 403 `insufficient_quota` / `AUTHZ_INSUFFICIENT_BALANCE`) now stamp a stable `quota_exhausted` diagnostics reason with a `switch-combo` recovery hint instead of the misleading default `retry` action (#10966)

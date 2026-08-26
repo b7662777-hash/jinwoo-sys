@@ -1,0 +1,1 @@
+- fix(sse): map OpenAI-compat voice names to real ElevenLabs voice_ids in direct TTS (#10589)

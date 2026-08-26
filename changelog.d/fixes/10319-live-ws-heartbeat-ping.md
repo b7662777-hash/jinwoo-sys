@@ -1,0 +1,1 @@
+- fix(dashboard): send periodic WS heartbeat pings so live dashboard connections stop dropping every ~35s (#10319)

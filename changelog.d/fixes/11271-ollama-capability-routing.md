@@ -1,0 +1,1 @@
+- **fix(ollama):** Ollama Local models are no longer flattened to `chat` at sync time — the synced store persists every advertised capability and chat filtering moves to read time, so `/v1/embeddings` and `/v1/images/generations` stop rejecting models the daemon reports as capable ([#11271](https://github.com/diegosouzapw/OmniRoute/pull/11271)) — thanks @yourspraveen

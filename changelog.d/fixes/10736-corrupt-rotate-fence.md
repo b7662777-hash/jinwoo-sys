@@ -1,0 +1,1 @@
+- **fix(db):** pause call-log rotation and record SQLITE_CORRUPT on `/api/db/health` instead of retrying writes against a malformed pager ([#10736](https://github.com/diegosouzapw/OmniRoute/issues/10736))

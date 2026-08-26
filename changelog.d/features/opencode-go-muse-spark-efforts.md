@@ -1,0 +1,1 @@
+- feat(opencode-go): expose Muse Spark 1.2 Contributor reasoning-effort aliases (minimal/low/medium/high/xhigh) in the Combo Builder

@@ -1,0 +1,1 @@
+- **docs(backend):** document that pre-write SQLite backups (including models.dev pricing) are throttled to once per 60 minutes and can be disabled with `DISABLE_SQLITE_AUTO_BACKUP` ([#10351](https://github.com/diegosouzapw/OmniRoute/issues/10351))

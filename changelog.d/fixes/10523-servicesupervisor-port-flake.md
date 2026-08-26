@@ -1,0 +1,1 @@
+- fix(services): isolate probeBeforeSpawn adoption tests on distinct ports to stop the order-dependent flake (#10523)

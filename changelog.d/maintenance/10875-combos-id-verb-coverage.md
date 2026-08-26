@@ -1,0 +1,1 @@
+- **docs(openapi):** document the `GET` and `PUT` operations on `/api/combos/{id}`, and add an operation-level coverage floor so a missing verb can no longer hide behind a path that already counts as covered ([#10875](https://github.com/diegosouzapw/OmniRoute/pull/10875))

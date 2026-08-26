@@ -1,0 +1,1 @@
+- **fix(codex):** drop non-standard `codex.*` SSE events by default so OpenAI SDK / Codex CLI `/v1/responses` clients are not 502'd by `event: codex.rate_limits` ([#11014](https://github.com/diegosouzapw/OmniRoute/issues/11014)) — thanks @RaviTharuma

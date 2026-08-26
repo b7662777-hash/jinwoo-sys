@@ -1,0 +1,1 @@
+- **fix(search):** name `/v1/search` 502s with provider id and sanitized Node cause code, without hostnames ([#10735](https://github.com/diegosouzapw/OmniRoute/issues/10735))

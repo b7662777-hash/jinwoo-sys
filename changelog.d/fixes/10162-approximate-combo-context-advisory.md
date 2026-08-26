@@ -1,0 +1,1 @@
+- **fix(routing):** keep approximate Combo context estimates advisory so requests reach concrete targets instead of returning a pre-dispatch 400 ([#10162](https://github.com/diegosouzapw/OmniRoute/pull/10162)) — thanks @xz-dev

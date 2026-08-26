@@ -1,0 +1,1 @@
+- **fix(search):** skip catalog-default SearXNG `http://localhost:8888/search` so Docker/K8s search does not ECONNREFUSED then 502 into the next provider ([#10976](https://github.com/diegosouzapw/OmniRoute/issues/10976))

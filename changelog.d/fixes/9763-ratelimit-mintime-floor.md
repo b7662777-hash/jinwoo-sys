@@ -1,0 +1,1 @@
+- **fix(ratelimit):** respect operator `minTimeBetweenRequestsMs` floor when relaxing the limiter on headroom — the adaptive rate-limit learning no longer silently erases a configured minimum gap between requests when the upstream reports plenty of remaining capacity ([#9763](https://github.com/diegosouzapw/OmniRoute/issues/9763)).

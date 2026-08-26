@@ -1,0 +1,1 @@
+- fix(cli): stop diagnosing every Next.js instrumentation-hook failure as the Android/Termux cache bug — only the Android "Unsupported platform: android" signal now triggers the Android hint, so a win32/desktop instrumentation error surfaces its real cause instead of a useless `mkdir -p ~/.cache` (#10028)

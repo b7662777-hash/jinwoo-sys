@@ -1,0 +1,1 @@
+- **fix(catalog):** `/v1/models` no longer advertises the built-in `auto/*` ids while auto routing is disabled — they were listed but rejected at request time with `Auto routing is disabled` ([#10831](https://github.com/diegosouzapw/OmniRoute/issues/10831), [#10857](https://github.com/diegosouzapw/OmniRoute/pull/10857)) — thanks @ntdat812

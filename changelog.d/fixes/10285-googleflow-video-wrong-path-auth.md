@@ -1,0 +1,1 @@
+- fix(video): stop advertising the googleflow (Veo) video provider as working and fail fast with a clear diagnostic — its submit/poll endpoints 404 and no server-side OAuth transport can satisfy the working endpoint (#10285)

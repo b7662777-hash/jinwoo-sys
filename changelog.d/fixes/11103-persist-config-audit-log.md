@@ -1,0 +1,1 @@
+- **Config audit persistence:** persist the configuration audit trail to SQLite (`config_audit_log`) instead of an in-memory buffer capped at 1000 volatile entries, and bound its growth with `cleanupConfigAudit()` driven by the `retention.configAudit` setting (default 30 days), wired into `runAutoCleanup` ([#11103](https://github.com/diegosouzapw/OmniRoute/pull/11103)).

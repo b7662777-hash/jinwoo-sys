@@ -1,0 +1,1 @@
+- fix(sse): gate structural chat admission shedding on real heap pressure instead of unconditional capacity, with a bounded headroom budget so a healthy heap can no longer bypass admission control indefinitely (#10183, #10268)

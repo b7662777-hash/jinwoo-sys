@@ -1,0 +1,1 @@
+- feat(api): accept PATCH on /api/combos/[id], the verb the OpenAPI spec already documents (#10869)

@@ -1,0 +1,1 @@
+- **fix(resilience):** scope the same-account transport retry (#9708) out of emergency-fallback and combo hops — it was retrying the free fallback model and combo targets too, doubling upstream calls and corrupting the terminal error status on those paths.

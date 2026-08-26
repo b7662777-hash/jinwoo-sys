@@ -1,0 +1,1 @@
+- **fix(translator):** convert OpenAI `image_url` blocks nested in `role: "tool"` / `tool_result` content to Claude `image` source blocks so OpenAI-compatible clients (Kimi Code CLI `ReadMediaFile`, and any other tool that returns media) no longer 400 the next Claude-format upstream turn ([#9692](https://github.com/diegosouzapw/OmniRoute/issues/9692))

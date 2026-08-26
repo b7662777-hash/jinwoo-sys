@@ -1,0 +1,1 @@
+- fix(cli): use 127.0.0.1 for the readiness health-check poll instead of localhost, avoiding Windows DNS-resolution delays that made a healthy server report as never-ready (#10508)

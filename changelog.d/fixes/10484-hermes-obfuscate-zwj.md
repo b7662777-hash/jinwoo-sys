@@ -1,0 +1,1 @@
+- fix(sse): stop ZWJ-obfuscating the substring "hermes" in user messages and hostnames (#10484)

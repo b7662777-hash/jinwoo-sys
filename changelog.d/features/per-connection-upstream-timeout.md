@@ -1,0 +1,1 @@
+- **feat(providers):** restore the operator-owned upstream timeout tier per connection via `providerSpecificData.timeoutMs` (preempts the maintainer-only model/provider registry tiers and the global `FETCH_TIMEOUT_MS`), and make the combo per-target timeout ceiling follow the selected connection

@@ -1,0 +1,1 @@
+- chore(quality): drain two `release/v3.8.50` base-reds — refresh the drifted doc counts (159 migrations, 56 free-forever providers, 40 free-tier pools, incl. the 42 `llm.txt` locale mirrors) and move `uncloseai-noauth.test.ts` to a collected path so the UncloseAI no-auth regression guard actually runs (#11160)

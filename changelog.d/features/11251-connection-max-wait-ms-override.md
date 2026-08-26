@@ -1,0 +1,1 @@
+- **feat(providers):** allow overriding the rate-limit queue wait timeout (`maxWaitMs`) per connection, alongside the existing `rpm`/`tpm`/`tpd`/`minTime`/`maxConcurrent` overrides — a single slow provider no longer has to lower the global wait budget for every other provider (#11251)

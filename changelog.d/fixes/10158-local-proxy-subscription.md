@@ -1,0 +1,1 @@
+- fix(proxy-subscriptions): allow local/loopback proxy-subscription fetch URLs (local-first, cloud-metadata still blocked) (#10158)

@@ -1,0 +1,1 @@
+- **fix(resilience):** retry a retryable Codex pre-output 502/503/504/507 once on the same account (2–3s jitter) before cooling the connection, and stop translating that mixed pool into an all-accounts quota `429` ([#9708](https://github.com/diegosouzapw/OmniRoute/issues/9708))

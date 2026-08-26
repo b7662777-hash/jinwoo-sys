@@ -1,0 +1,1 @@
+- **feat(rankings):** free provider rankings can now report what each provider actually served — `reliability.usage` (requests, successes, success rate over a window) behind the opt-in `withUsage`/`usageRange` query parameters, so a provider that answers every call with an error is no longer described as healthy ([#10926](https://github.com/diegosouzapw/OmniRoute/pull/10926))

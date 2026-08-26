@@ -1,0 +1,1 @@
+- Document the conditional management authentication and 401/403 responses for `GET /api/openapi/spec`.

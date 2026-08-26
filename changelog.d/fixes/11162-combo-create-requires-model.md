@@ -1,0 +1,1 @@
+- **Combo create:** creating a routing combo without any model is now refused (`400`) — the CLI requires `--models`/`--model` on `combo create`, matching the dashboard which already rejected empty combos.

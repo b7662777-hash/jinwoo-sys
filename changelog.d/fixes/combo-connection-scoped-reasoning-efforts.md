@@ -1,0 +1,1 @@
+- **fix(catalog):** derive combo reasoning-effort tiers from the exact runtime-selectable connection scope, intersecting dynamic, pinned, allowlisted, and compatible provider-node evidence while failing closed on unknown capabilities.

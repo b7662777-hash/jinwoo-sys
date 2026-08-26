@@ -1,0 +1,1 @@
+- **feat(usage):** show Kimi Coding's fixed-order Code 5-hour/7-day quota windows plus Extra Usage status, balance, monthly spend/limit, and the official Additional Credits link on Dashboard → Quota cards.

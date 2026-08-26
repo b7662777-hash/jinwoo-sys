@@ -1,0 +1,1 @@
+- **docs(docker):** document default SQLite as single-replica / HA-unsupported, including Recreate and HEALTHCHECK session blast radius ([#10350](https://github.com/diegosouzapw/OmniRoute/issues/10350))

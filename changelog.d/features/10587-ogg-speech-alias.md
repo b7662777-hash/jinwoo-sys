@@ -1,0 +1,1 @@
+- **feat(providers):** accept `response_format=ogg` on `/v1/audio/speech` as an alias for the existing Opus/Ogg encoder ([#10587](https://github.com/diegosouzapw/OmniRoute/issues/10587))

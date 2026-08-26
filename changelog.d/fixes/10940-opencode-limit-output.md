@@ -1,0 +1,1 @@
+- fix(cli): always emit limit.output in generated OpenCode config so schema validation passes for metadata-less models (#10940)

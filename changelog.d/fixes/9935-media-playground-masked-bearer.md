@@ -1,0 +1,1 @@
+- fix(dashboard): media mini-playgrounds authenticate via session instead of sending the masked API key as Bearer, fixing 401s under REQUIRE_API_KEY (#9935)

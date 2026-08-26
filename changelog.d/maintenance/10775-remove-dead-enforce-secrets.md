@@ -1,0 +1,1 @@
+- chore(security): remove the unused `enforceSecrets()` duplicate of the boot secret check and pin the live `enforceWebRuntimeEnv()` wiring with a regression test (#10775)

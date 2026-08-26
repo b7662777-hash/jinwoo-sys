@@ -1,0 +1,1 @@
+- **chore(lint):** ratchet `@typescript-eslint/no-unused-vars` scoped to `src/` + `open-sse/` + `tests/` (`args: "all"`, `_`-prefix escape hatch) and freeze the 1393 pre-existing violations via bulk suppressions — same pattern as the #7879 `toNumber` ratchet. New unused bindings now fail lint. ([#11247](https://github.com/diegosouzapw/OmniRoute/pull/11247))

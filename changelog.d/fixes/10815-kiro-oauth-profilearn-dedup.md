@@ -1,0 +1,1 @@
+- fix(db): disambiguate `createProviderConnection()`'s OAuth email dedup by `providerSpecificData.profileArn` in addition to `username`, so adding a second Kiro/AWS profile with the same email creates a new connection instead of silently merging into the first (#10815)

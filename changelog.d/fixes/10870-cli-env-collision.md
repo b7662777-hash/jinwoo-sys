@@ -1,0 +1,1 @@
+- fix(cli): warn when a .env line never takes effect, and stop swallowing an unreadable .env (#10870)

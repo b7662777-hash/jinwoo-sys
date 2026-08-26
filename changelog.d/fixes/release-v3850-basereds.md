@@ -1,0 +1,3 @@
+- fix(api): repair broken `@/lib/db/connections` import in the usage utilization route that failed the production build (#10939 follow-up)
+- chore(docs): regenerate PROVIDER_REFERENCE and refresh README diagram SVGs to the real provider count (347)
+- chore(lint): prune ESLint suppressions orphaned on the release branch

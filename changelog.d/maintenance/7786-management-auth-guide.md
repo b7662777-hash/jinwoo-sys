@@ -1,0 +1,1 @@
+- **docs(auth):** distinguish dashboard sessions, `oma_live_…` Access Tokens, manage-scoped API keys, and inference keys ([#7786](https://github.com/diegosouzapw/OmniRoute/issues/7786))

@@ -1,0 +1,1 @@
+- fix(cli): distinguish a CLI-probe timeout from a genuinely absent binary in locateCommand, and resolve the Hermes Agent Apply flow's `keyId` server-side instead of writing the `YOUR_OMNIROUTE_API_KEY_HERE` placeholder (#10710, #10711)

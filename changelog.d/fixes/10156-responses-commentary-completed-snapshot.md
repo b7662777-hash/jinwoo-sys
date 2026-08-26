@@ -1,0 +1,1 @@
+- **fix(sse):** Responses-passthrough `response.completed` snapshots now drop `phase:"commentary"` items the same way live SSE frames already do, so the terminal `response.output` array no longer echoes internal commentary text that was already suppressed from the stream (#10156).

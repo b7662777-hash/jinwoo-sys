@@ -1,0 +1,1 @@
+- **fix(translator):** preserve omitted OpenCode `subagent.sessionID` values — optional default-less plain strings now use the Responses `null = omit` sentinel and are stripped before the client sees the tool call, so Codex/Responses no longer invent filler session IDs ([#11297](https://github.com/diegosouzapw/OmniRoute/pull/11297)) — thanks @ofonseca-pyming

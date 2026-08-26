@@ -1,0 +1,1 @@
+- **fix(cliproxy):** read platform/arch at runtime via `os.platform()`/`os.arch()` in `binaryManager` so the embedded installer selects the Windows/ARM assets even when the release bundle is built on a Linux runner (fixes #10244)

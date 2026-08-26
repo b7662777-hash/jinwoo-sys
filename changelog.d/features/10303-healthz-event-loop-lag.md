@@ -1,0 +1,1 @@
+- **feat(resilience):** warn when `/healthz` is served under event-loop lag ≥200ms so a slow 200 is visible as sick, not healthy ([#10303](https://github.com/diegosouzapw/OmniRoute/issues/10303))

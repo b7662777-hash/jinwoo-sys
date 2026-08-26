@@ -1,0 +1,1 @@
+- **feat(dashboard):** replace the hard Home → onboarding redirect with a dismissable first-run readiness card so returning users can stay on Home while new users still get a clear 4-step path ([#11282](https://github.com/diegosouzapw/OmniRoute/pull/11282))

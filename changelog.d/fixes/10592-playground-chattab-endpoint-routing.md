@@ -1,0 +1,1 @@
+- fix(dashboard): route the Playground's ChatTab "Send" through the endpoint actually selected in StudioConfigPane (`search`, `web.fetch`, etc.) instead of always POSTing to `/api/v1/chat/completions`, fixing the false "No active credentials for provider" 404 when testing search-only providers (#10592)

@@ -1,0 +1,1 @@
+- **fix(providers):** Reject silent validation degradation on provider connection patch — unknown `rateLimitOverrides` keys (e.g. a typo'd `tpm`) and empty/non-numeric values now return `400` with the rejected key list instead of being silently dropped ([#11101](https://github.com/diegosouzapw/OmniRoute/pull/11101))

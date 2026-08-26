@@ -1,0 +1,1 @@
+- fix(dashboard): keep `open-sse/config/providerRegistry.ts` free of `node:net` so the provider detail client bundle builds again — the host classification moved to a platform-free `src/shared/network/privateHost.ts` with a pure-JS `isIP` equivalent, leaving the #11122 routing behaviour unchanged (#11154)

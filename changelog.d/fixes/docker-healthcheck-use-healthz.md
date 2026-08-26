@@ -1,0 +1,1 @@
+- **fix(ops):** Docker HEALTHCHECK probes lightweight `/healthz` instead of `/api/monitoring/health` so a busy event loop does not mark the container Unhealthy (`scripts/dev/healthcheck.mjs`)

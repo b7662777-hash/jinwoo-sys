@@ -1,0 +1,1 @@
+- fix(quality): bump EXPECTED_FEATURE_FLAG_COUNT to 52 for #10889's own new flag (missed at merge time)

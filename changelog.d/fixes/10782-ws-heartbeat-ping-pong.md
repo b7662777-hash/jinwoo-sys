@@ -1,0 +1,1 @@
+- fix(sse): replace LiveWS's application-only liveness check with a protocol-level `ws.ping()`/`pong` heartbeat (RFC 6455 §5.5.2) alongside the existing one, so a read-only dashboard subscriber that never sends anything survives the connection timeout — a socket that stops reading frames entirely is still reaped exactly as before (#10782)

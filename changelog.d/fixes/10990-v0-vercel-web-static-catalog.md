@@ -1,0 +1,1 @@
+- **Static model catalog for v0-vercel-web:** seed a static catalog for the v0-vercel-web web-cookie provider (v0-1.0-md, v0-1.5-lg, v0-1.5-md) so its dashboard "Available Models" / "Import from /models" UI serves a usable list instead of falling through to the route's 400 "does not support models listing" ([#10990](https://github.com/diegosouzapw/OmniRoute/issues/10990)).

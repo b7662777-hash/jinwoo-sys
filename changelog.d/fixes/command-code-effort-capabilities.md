@@ -1,0 +1,1 @@
+- fix(combo): resolve effort-suffixed command-code variants (e.g. `deepseek-v4-flash-max`) to their base model for capability lookups, so tool-bearing combo requests keep the declared priority order instead of reordering behind models with confirmed capabilities

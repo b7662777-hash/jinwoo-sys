@@ -1,0 +1,1 @@
+- **fix(ops):** Docker HEALTHCHECK defaults to the lightweight `/healthz` lifecycle probe instead of the heavy `/api/monitoring/health` path, with an `OMNIROUTE_HEALTHCHECK_PATH` opt-in override ([#10311](https://github.com/diegosouzapw/OmniRoute/pull/10311))

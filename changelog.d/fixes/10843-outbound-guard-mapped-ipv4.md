@@ -1,0 +1,1 @@
+- **fix(security):** Outbound URL guard now resolves IPv4-mapped IPv6 literals to their embedded address, so `[::ffff:169.254.169.254]` is refused by the unconditional cloud-metadata block like its dotted spelling; `[::]` is refused alongside `0.0.0.0` ([#10843](https://github.com/diegosouzapw/OmniRoute/pull/10843)) — thanks @ntdat812

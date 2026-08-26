@@ -1,0 +1,1 @@
+- fix(providers): mark the blackbox provider deprecated — api.blackbox.ai returns HTTP 404 on every path variant (sweep 2026-08-21), so the public inference surface is dead and the catalog entry now carries a deprecation notice. ([#10997](https://github.com/diegosouzapw/OmniRoute/issues/10997))

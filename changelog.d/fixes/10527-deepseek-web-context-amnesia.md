@@ -1,0 +1,1 @@
+- fix(sse): auto-replay a bounded multi-turn trajectory in the DeepSeek Web prompt builder for clients that never send `tools[]`, so agentic clients like Cline stop losing the original task after a couple of turns (#10527)

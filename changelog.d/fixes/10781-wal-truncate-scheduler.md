@@ -1,0 +1,1 @@
+- fix(db): periodically run `wal_checkpoint(TRUNCATE)` so the SQLite WAL file shrinks on long-running servers (default 6h, override with `OMNIROUTE_WAL_TRUNCATE_INTERVAL_MS`, `0` disables) (#10781)

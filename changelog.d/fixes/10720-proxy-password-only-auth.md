@@ -1,0 +1,1 @@
+- fix(proxy): keep password-only proxy credentials instead of dropping them when no username is set (#10720)

@@ -1,0 +1,1 @@
+- fix(build): tolerate a same-realpath symlink or stale-typed dest in the standalone bundle assembler, fixing non-deterministic `ERR_FS_CP_EINVAL`/`ERR_FS_CP_DIR_TO_NON_DIR` crashes under heavy concurrent build I/O

@@ -1,0 +1,1 @@
+- fix(mitm): forward passthrough traffic to the actual requested Host instead of misrouting every non-TARGET_HOSTS request to the hardcoded Antigravity sandbox host (#10479)

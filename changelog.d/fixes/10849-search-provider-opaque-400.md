@@ -1,0 +1,1 @@
+- fix(api): POST /v1/search now replies with a named `Unknown search provider: <id>` error (and field-named validation messages) instead of an opaque `Invalid request` for unrecognized or short-alias provider ids like `brave`/`serper` (#10849)

@@ -1,0 +1,1 @@
+- fix(quality): rebaseline file-size for modelCapabilities.ts (1016->1072) drift from merged tip fixes (#11034 et al)

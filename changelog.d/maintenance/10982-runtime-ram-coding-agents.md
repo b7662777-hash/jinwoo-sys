@@ -1,0 +1,1 @@
+- **docs(docker):** document runtime RAM for coding-agent `/v1/responses` (image default 1 GiB heap is dashboard-only; 8–12 GiB heap for agents) ([#10982](https://github.com/diegosouzapw/OmniRoute/issues/10982))

@@ -1,0 +1,1 @@
+- **feat(radar):** add curated-family combo suggestions, a guided combo page, and the read-only Radar MCP catalog tool ([#9836](https://github.com/diegosouzapw/OmniRoute/pull/9836))

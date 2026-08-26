@@ -1,0 +1,1 @@
+- **docs(docker):** spell out that `:latest` tracks the highest **published** stable SemVer (not git `main`), and that GitOps should pin `X.Y.Z` ([#10317](https://github.com/diegosouzapw/OmniRoute/issues/10317))

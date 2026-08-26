@@ -1,0 +1,1 @@
+- **fix(images):** retry Codex image generation on a sibling ChatGPT account when the requested model isn't entitled on the current account, instead of failing the request outright ([#8307](https://github.com/diegosouzapw/OmniRoute/pull/8307)).

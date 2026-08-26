@@ -1,0 +1,1 @@
+- **fix(providers):** Keep NVIDIA timeout probes and generic Antigravity/AGY HTTP 400 probes from poisoning credential health while preserving explicit Google geo-block handling ([#10799](https://github.com/diegosouzapw/OmniRoute/pull/10799)) — thanks @Zartharas

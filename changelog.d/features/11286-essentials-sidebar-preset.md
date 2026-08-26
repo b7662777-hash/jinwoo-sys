@@ -1,0 +1,1 @@
+- **feat(dashboard):** add an Essentials sidebar preset that shows only the beginner core path (Home → Endpoints → API Keys → Providers → Health → Settings) while keeping Advanced tools reachable via Command Palette search ([#11286](https://github.com/diegosouzapw/OmniRoute/pull/11286))

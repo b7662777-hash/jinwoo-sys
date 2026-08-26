@@ -1,0 +1,1 @@
+- fix(guardrails): resolve the public provider alias before querying credentials in the Vision Bridge router, so command-code/opencode (and any alias!=id provider) are no longer reported as "unusable" despite active connections (#10702)

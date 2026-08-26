@@ -1,0 +1,1 @@
+- **docs:** Custom combos are only invoked by their exact name in the `model` field — `auto` remains a separate zero-config router, and `openrouter/auto` is a paid OpenRouter product, not an alias ([#10779](https://github.com/diegosouzapw/OmniRoute/pull/10779)) — thanks @maxmad64bis

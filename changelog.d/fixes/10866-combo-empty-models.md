@@ -1,0 +1,1 @@
+- fix(api): reject a combo update that removes every model, and store the copilot's combo targets where the router reads them (#10866)

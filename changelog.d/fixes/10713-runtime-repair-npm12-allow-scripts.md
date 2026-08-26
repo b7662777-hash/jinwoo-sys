@@ -1,0 +1,1 @@
+- fix(cli): pass --allow-scripts for the runtime's own npm-installed dependencies, so npm 12+'s default install-scripts block no longer silently skips better-sqlite3's native build (#10713)

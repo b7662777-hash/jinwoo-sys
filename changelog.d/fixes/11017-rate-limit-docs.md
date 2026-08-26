@@ -1,0 +1,1 @@
+- **docs(api-keys):** document that unset `DEFAULT_RATE_LIMIT_PER_DAY` is unlimited (#2289), not a hidden 1000/day cap ([#11017](https://github.com/diegosouzapw/OmniRoute/issues/11017)) — thanks @RaviTharuma

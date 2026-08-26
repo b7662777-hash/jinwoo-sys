@@ -1,0 +1,1 @@
+- **fix(providers):** the loopback readiness gate no longer memorizes a failed probe — the next caller after 30s starts a fresh probe, and a readiness failure is logged once per probe instead of once per caller ([#10903](https://github.com/diegosouzapw/OmniRoute/pull/10903))

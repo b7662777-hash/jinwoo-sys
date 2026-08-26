@@ -1,0 +1,1 @@
+- fix(command-code): surface reasoning-only output as content when a model emits no text-delta (#10986)

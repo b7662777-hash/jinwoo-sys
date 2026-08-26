@@ -1,0 +1,1 @@
+- fix(providers): register a real Firefly auth probe under both the `firefly` alias and the `adobe-firefly` canonical id, and normalize the provider id before the generic web-cookie fallback, so a Firefly connection stops always reporting "Provider validation not supported" (#10522)

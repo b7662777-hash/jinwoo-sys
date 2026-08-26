@@ -1,0 +1,1 @@
+- **fix(skills):** Marketplace-installed skills are available to API-key-scoped requests, including existing SkillsMP and skills.sh installs ([#10854](https://github.com/diegosouzapw/OmniRoute/pull/10854)) — thanks @kriptoburak

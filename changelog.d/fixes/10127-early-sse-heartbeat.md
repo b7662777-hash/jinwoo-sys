@@ -1,0 +1,1 @@
+- **fix(streaming):** start early SSE heartbeats when Responses or Messages requests opt into streaming through the request body (#10127)

@@ -1,0 +1,1 @@
+- **fix(antigravity):** map Gemini 3.7 Flash tier ids (`gemini-3.7-flash-high/medium/low`, bare `gemini-3.7-flash`) to the upstream `gemini-3.7-flash-tiered` model id Google's Cloud Code endpoint expects, and configure per-tier thinking budgets ([#10882](https://github.com/diegosouzapw/OmniRoute/pull/10882)) — thanks @adevwithpurpose

@@ -1,0 +1,1 @@
+- **docs(docker):** document N independent `DATA_DIR`s as the supported large `/v1/responses` scale-out (one V8 heap ≠ host RAM; do not `replicas>1` on one SQLite file) ([#11024](https://github.com/diegosouzapw/OmniRoute/issues/11024)) — thanks @RaviTharuma

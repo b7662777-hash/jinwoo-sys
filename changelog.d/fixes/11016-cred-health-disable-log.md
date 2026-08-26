@@ -1,0 +1,1 @@
+- **fix(startup):** log `Credential health scheduler disabled` when `OMNIROUTE_DISABLE_CREDENTIAL_HEALTH_CHECK` is set instead of lying with `started` ([#11016](https://github.com/diegosouzapw/OmniRoute/issues/11016)) — thanks @RaviTharuma

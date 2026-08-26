@@ -1,0 +1,1 @@
+- **feat(dashboard):** lead Traffic Inspector with a purpose-first header that separates "what happened" from "how it happened", so beginners can read request outcomes without drowning in protocol detail ([#11283](https://github.com/diegosouzapw/OmniRoute/pull/11283))

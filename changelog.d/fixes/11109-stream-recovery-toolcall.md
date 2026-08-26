@@ -1,0 +1,1 @@
+- fix(sse): resume mid-stream recovery after a _completed_ tool call — `finish_reason: "tool_calls"` is now tracked per-call instead of as a general terminal marker, so truncation of trailing prose after a fully-delivered tool call is recoverable while in-flight calls stay blocked ([#11109](https://github.com/diegosouzapw/OmniRoute/pull/11109))

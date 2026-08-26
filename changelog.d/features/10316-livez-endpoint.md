@@ -1,0 +1,1 @@
+- **feat(docker):** add `GET`/`HEAD` `/livez` as a process-alive probe, distinct from `/healthz` readiness ([#10316](https://github.com/diegosouzapw/OmniRoute/issues/10316))

@@ -1,0 +1,1 @@
+- **feat(cli):** run `omniroute serve --tray` as a detached desktop process after server and tray readiness, with graphical login auto-start support.

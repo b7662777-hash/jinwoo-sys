@@ -1,0 +1,1 @@
+- fix(cli): resolve $ref path params and add PATCH combos requestBody in generated API commands (#10955)

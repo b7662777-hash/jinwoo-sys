@@ -1,0 +1,1 @@
+- fix(dashboard): filter the Modality Bridge Vision model picker to vision-capable models, matching the sibling Video/Audio tabs (#10703)

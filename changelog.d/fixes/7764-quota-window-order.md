@@ -1,0 +1,1 @@
+- **fix(usage):** keep session/weekly/monthly quota windows in chronological order on every provider card. The order is now derived from the quota keys themselves instead of a provider whitelist, so Claude, MiniMax, Z.ai and Command Code stop rendering the two bars in opposite positions across sibling accounts ([#7764](https://github.com/diegosouzapw/OmniRoute/issues/7764))

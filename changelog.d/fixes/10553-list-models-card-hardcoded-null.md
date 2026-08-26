@@ -1,0 +1,1 @@
+- fix(dashboard): show the real model count on the "List Models" endpoint card instead of a permanent "—" (#10553)

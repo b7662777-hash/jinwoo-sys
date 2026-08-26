@@ -1,0 +1,1 @@
+- **fix(resilience):** count heavyweight `/v1` admission leases in the SIGTERM drain and send `Retry-After` on shutdown 503s so Recreate no longer looks like an empty 502 ([#11015](https://github.com/diegosouzapw/OmniRoute/issues/11015)) — thanks @RaviTharuma

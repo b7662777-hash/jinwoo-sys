@@ -1,0 +1,1 @@
+- **fix(sse):** the header-budget drop warning fires once per unique dropped-header set instead of on every SSE response (warn-storm fix) ([#10397](https://github.com/diegosouzapw/OmniRoute/pull/10397) — thanks @lamchun1110)

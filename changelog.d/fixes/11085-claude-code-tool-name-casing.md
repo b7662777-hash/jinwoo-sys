@@ -1,0 +1,1 @@
+- **fix(claude):** restore canonical tool names (`bash` → `Bash`, `croncreate` → `CronCreate`) on non-streaming OpenAI→Claude conversion and through identity-echo alias maps, so Claude Code stops rejecting tool calls with "No such tool available" ([#11085](https://github.com/diegosouzapw/OmniRoute/pull/11085)) — thanks @linhdmn

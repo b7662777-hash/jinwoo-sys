@@ -1,0 +1,1 @@
+- **fix(providers):** compatible/custom providers now save valid Data URL icons and show Add/Edit save failures instead of silently doing nothing ([#10247](https://github.com/diegosouzapw/OmniRoute/pull/10247)) — thanks @xz-dev

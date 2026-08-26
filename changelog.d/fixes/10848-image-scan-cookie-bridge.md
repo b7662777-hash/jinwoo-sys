@@ -1,0 +1,1 @@
+- fix(config): exclude cookie-auth image bridges (chatgpt-web, gemini-web) from the unprefixed model scan so a bare id never silently binds to an unofficial web bridge (#10848)

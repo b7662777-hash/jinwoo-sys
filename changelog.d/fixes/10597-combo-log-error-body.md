@@ -1,0 +1,1 @@
+- **fix(sse):** Include the redacted upstream error body in the per-target COMBO failure log (`Model X failed, trying next`) so operators can triage a 400/500 without reproducing the request ([#10597](https://github.com/diegosouzapw/OmniRoute/issues/10597))

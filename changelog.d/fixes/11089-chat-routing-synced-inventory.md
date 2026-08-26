@@ -1,0 +1,1 @@
+- **fix(resilience):** filter chat connection selection by each connection's *synced* model inventory on multi-host self-hosted providers (`ollama-local`, `lm-studio`, `vllm`, …), so a request for a model only one host advertises is pinned to that host instead of failing over onto a host that never had it ([#11089](https://github.com/diegosouzapw/OmniRoute/issues/11089))
