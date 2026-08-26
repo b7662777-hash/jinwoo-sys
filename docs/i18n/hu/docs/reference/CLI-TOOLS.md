@@ -762,14 +762,14 @@ omniroute completion                   # Shell kiegészítés generálása
 Kész példa, amely tartalmaz egy tokenizált OmniRoute URL-t:
 
 ```txt
-Token példa: sk-a3ab3c080beaee3a-69f4a4-070d71af
+Token példa: sk-example-vscode-token-not-real
 
 Szabványos OpenAI alap: http://localhost:20128/v1
-VS Code modellek: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/models
-VS Code chat: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/chat/completions
-VS Code válaszok: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/responses
-Ollama címkék: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/api/tags
-Ollama chat: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/api/chat
+VS Code modellek: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/models
+VS Code chat: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/chat/completions
+VS Code válaszok: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/responses
+Ollama címkék: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/api/tags
+Ollama chat: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/api/chat
 ```
 
 ---

@@ -300,3 +300,9 @@ docker-compose.yml.bak
 /data/*.sqlite-wal
 /data/*.sqlite-shm
 /scratch/
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal

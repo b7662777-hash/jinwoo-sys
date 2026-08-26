@@ -730,14 +730,14 @@ omniroute completion                   # 셸 완성 생성
 붙여넣기 준비 완료 예제와 토큰화된 OmniRoute URL:
 
 ```txt
-토큰 예제: sk-a3ab3c080beaee3a-69f4a4-070d71af
+토큰 예제: sk-example-vscode-token-not-real
 
 표준 OpenAI 기본: http://localhost:20128/v1
-VS Code 모델: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/models
-VS Code 채팅: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/chat/completions
-VS Code 응답: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/responses
-Ollama 태그: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/api/tags
-Ollama 채팅: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/api/chat
+VS Code 모델: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/models
+VS Code 채팅: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/chat/completions
+VS Code 응답: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/responses
+Ollama 태그: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/api/tags
+Ollama 채팅: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/api/chat
 ```
 
 ---

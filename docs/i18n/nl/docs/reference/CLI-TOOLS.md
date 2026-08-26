@@ -765,14 +765,14 @@ omniroute completion                   # Genereer shell voltooiing
 Klaar-om-te-plakken voorbeelden met een getokeniseerde OmniRoute URL:
 
 ```txt
-Token voorbeeld: sk-a3ab3c080beaee3a-69f4a4-070d71af
+Token voorbeeld: sk-example-vscode-token-not-real
 
 Standaard OpenAI basis: http://localhost:20128/v1
-VS Code modellen: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/models
-VS Code chat: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/chat/completions
-VS Code responses: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/responses
-Ollama tags: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/api/tags
-Ollama chat: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/api/chat
+VS Code modellen: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/models
+VS Code chat: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/chat/completions
+VS Code responses: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/responses
+Ollama tags: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/api/tags
+Ollama chat: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/api/chat
 ```
 
 ---

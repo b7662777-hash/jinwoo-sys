@@ -750,14 +750,14 @@ omniroute completion                   # สร้างการเติมค
 ตัวอย่างที่พร้อมวางพร้อม URL OmniRoute ที่มีการจัดการโทเค็น:
 
 ```txt
-Token example: sk-a3ab3c080beaee3a-69f4a4-070d71af
+Token example: sk-example-vscode-token-not-real
 
 ฐานข้อมูล OpenAI มาตรฐาน: http://localhost:20128/v1
-โมเดล VS Code: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/models
-แชท VS Code: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/chat/completions
-การตอบสนอง VS Code: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/responses
-แท็ก Ollama: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/api/tags
-แชท Ollama: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/api/chat
+โมเดล VS Code: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/models
+แชท VS Code: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/chat/completions
+การตอบสนอง VS Code: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/responses
+แท็ก Ollama: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/api/tags
+แชท Ollama: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/api/chat
 ```
 
 ---

@@ -719,14 +719,14 @@ omniroute completion                   # シェルの補完を生成
 貼り付け可能なトークン化されたOmniRoute URLの例:
 
 ```txt
-トークン例: sk-a3ab3c080beaee3a-69f4a4-070d71af
+トークン例: sk-example-vscode-token-not-real
 
 標準OpenAIベース: http://localhost:20128/v1
-VS Codeモデル: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/models
-VS Codeチャット: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/chat/completions
-VS Codeレスポンス: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/responses
-Ollamaタグ: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/api/tags
-Ollamaチャット: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/api/chat
+VS Codeモデル: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/models
+VS Codeチャット: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/chat/completions
+VS Codeレスポンス: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/responses
+Ollamaタグ: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/api/tags
+Ollamaチャット: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/api/chat
 ```
 
 ---

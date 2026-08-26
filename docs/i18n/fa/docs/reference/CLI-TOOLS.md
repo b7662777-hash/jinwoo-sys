@@ -738,14 +738,14 @@ omniroute completion                   # تولید تکمیل شل
 نمونه‌های آماده برای چسباندن با یک URL OmniRoute توکن‌شده:
 
 ```txt
-مثال توکن: sk-a3ab3c080beaee3a-69f4a4-070d71af
+مثال توکن: sk-example-vscode-token-not-real
 
 پایه استاندارد OpenAI: http://localhost:20128/v1
-مدل‌های VS Code: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/models
-چت VS Code: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/chat/completions
-پاسخ‌های VS Code: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/responses
-برچسب‌های Ollama: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/api/tags
-چت Ollama: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/api/chat
+مدل‌های VS Code: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/models
+چت VS Code: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/chat/completions
+پاسخ‌های VS Code: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/responses
+برچسب‌های Ollama: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/api/tags
+چت Ollama: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/api/chat
 ```
 
 ---

@@ -757,14 +757,14 @@ omniroute completion                   # Tạo hoàn thành shell
 Ví dụ sẵn sàng để dán với URL OmniRoute đã được phân tách:
 
 ```txt
-Ví dụ token: sk-a3ab3c080beaee3a-69f4a4-070d71af
+Ví dụ token: sk-example-vscode-token-not-real
 
 Cơ sở OpenAI tiêu chuẩn: http://localhost:20128/v1
-Mô hình VS Code: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/models
-Trò chuyện VS Code: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/chat/completions
-Phản hồi VS Code: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/responses
-Thẻ Ollama: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/api/tags
-Trò chuyện Ollama: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/api/chat
+Mô hình VS Code: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/models
+Trò chuyện VS Code: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/chat/completions
+Phản hồi VS Code: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/responses
+Thẻ Ollama: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/api/tags
+Trò chuyện Ollama: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/api/chat
 ```
 
 ---

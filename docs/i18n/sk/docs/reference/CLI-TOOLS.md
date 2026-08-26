@@ -770,14 +770,14 @@ omniroute completion                   # Generovať dokončenie shellu
 Príklady pripravené na vloženie s tokenizovanou OmniRoute URL:
 
 ```txt
-Token príklad: sk-a3ab3c080beaee3a-69f4a4-070d71af
+Token príklad: sk-example-vscode-token-not-real
 
 Štandardný OpenAI základ: http://localhost:20128/v1
-VS Code modely: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/models
-VS Code chat: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/chat/completions
-VS Code odpovede: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/responses
-Ollama tagy: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/api/tags
-Ollama chat: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/api/chat
+VS Code modely: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/models
+VS Code chat: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/chat/completions
+VS Code odpovede: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/responses
+Ollama tagy: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/api/tags
+Ollama chat: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/api/chat
 ```
 
 ---

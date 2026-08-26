@@ -756,14 +756,14 @@ omniroute completion                   # Hasilkan penyelesaian shell
 Contoh sedia untuk tampal dengan URL OmniRoute yang ditokenkan:
 
 ```txt
-Contoh token: sk-a3ab3c080beaee3a-69f4a4-070d71af
+Contoh token: sk-example-vscode-token-not-real
 
 Asas OpenAI standard: http://localhost:20128/v1
-Model VS Code: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/models
-Sembang VS Code: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/chat/completions
-Respons VS Code: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/responses
-Tag Ollama: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/api/tags
-Sembang Ollama: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/api/chat
+Model VS Code: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/models
+Sembang VS Code: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/chat/completions
+Respons VS Code: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/responses
+Tag Ollama: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/api/tags
+Sembang Ollama: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/api/chat
 ```
 
 ---

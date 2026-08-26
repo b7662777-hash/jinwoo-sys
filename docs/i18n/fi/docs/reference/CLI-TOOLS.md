@@ -763,14 +763,14 @@ omniroute completion                   # Generoi shell-täydennys
 Valmiit esimerkit tokenisoidulla OmniRoute-URL-osoitteella:
 
 ```txt
-Token esimerkki: sk-a3ab3c080beaee3a-69f4a4-070d71af
+Token esimerkki: sk-example-vscode-token-not-real
 
 Vakio OpenAI perus: http://localhost:20128/v1
-VS Code mallit: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/models
-VS Code chat: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/chat/completions
-VS Code vastaukset: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/responses
-Ollama tagit: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/api/tags
-Ollama chat: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/api/chat
+VS Code mallit: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/models
+VS Code chat: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/chat/completions
+VS Code vastaukset: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/responses
+Ollama tagit: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/api/tags
+Ollama chat: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/api/chat
 ```
 
 ---

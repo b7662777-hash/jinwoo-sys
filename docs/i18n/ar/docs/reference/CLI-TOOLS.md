@@ -748,14 +748,14 @@ omniroute completion                   # توليد إكمال الصدفة
 أمثلة جاهزة للنسخ مع عنوان URL موحد:
 
 ```txt
-مثال على الرمز: sk-a3ab3c080beaee3a-69f4a4-070d71af
+مثال على الرمز: sk-example-vscode-token-not-real
 
 الأساس القياسي لـ OpenAI: http://localhost:20128/v1
-نماذج VS Code: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/models
-دردشة VS Code: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/chat/completions
-ردود VS Code: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/responses
-علامات Ollama: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/api/tags
-دردشة Ollama: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/api/chat
+نماذج VS Code: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/models
+دردشة VS Code: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/chat/completions
+ردود VS Code: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/responses
+علامات Ollama: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/api/tags
+دردشة Ollama: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/api/chat
 ```
 
 ---

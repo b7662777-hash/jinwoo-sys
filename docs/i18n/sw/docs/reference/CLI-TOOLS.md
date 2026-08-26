@@ -764,14 +764,14 @@ omniroute completion                   # Tengeneza ukamilifu wa shell
 Mifano ya kuandika kwa urahisi yenye URL ya OmniRoute iliyotolewa:
 
 ```txt
-Mfano wa token: sk-a3ab3c080beaee3a-69f4a4-070d71af
+Mfano wa token: sk-example-vscode-token-not-real
 
 Msingi wa kawaida wa OpenAI: http://localhost:20128/v1
-Mifano ya VS Code: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/models
-Mazungumzo ya VS Code: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/chat/completions
-Majibu ya VS Code: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/responses
-Lehemu za Ollama: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/api/tags
-Mazungumzo ya Ollama: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/api/chat
+Mifano ya VS Code: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/models
+Mazungumzo ya VS Code: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/chat/completions
+Majibu ya VS Code: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/responses
+Lehemu za Ollama: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/api/tags
+Mazungumzo ya Ollama: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/api/chat
 ```
 
 ---

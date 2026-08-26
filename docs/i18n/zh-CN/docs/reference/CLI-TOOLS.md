@@ -727,14 +727,14 @@ omniroute completion                   # 生成 shell 完成
 准备粘贴的示例，带有标记的 OmniRoute URL：
 
 ```txt
-Token 示例: sk-a3ab3c080beaee3a-69f4a4-070d71af
+Token 示例: sk-example-vscode-token-not-real
 
 标准 OpenAI 基础: http://localhost:20128/v1
-VS Code 模型: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/models
-VS Code 聊天: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/chat/completions
-VS Code 响应: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/responses
-Ollama 标签: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/api/tags
-Ollama 聊天: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/api/chat
+VS Code 模型: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/models
+VS Code 聊天: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/chat/completions
+VS Code 响应: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/responses
+Ollama 标签: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/api/tags
+Ollama 聊天: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/api/chat
 ```
 
 ---

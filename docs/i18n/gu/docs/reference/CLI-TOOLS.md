@@ -732,14 +732,14 @@ omniroute completion                   # શેલ પૂર્ણતા જન�
 ટોકનાઇઝ્ડ ઓમ્નીરૂટ URL સાથે તૈયાર-થી-પેસ્ટ ઉદાહરણો:
 
 ```txt
-ટોકન ઉદાહરણ: sk-a3ab3c080beaee3a-69f4a4-070d71af
+ટોકન ઉદાહરણ: sk-example-vscode-token-not-real
 
 માનક OpenAI આધાર: http://localhost:20128/v1
-VS Code મોડેલ્સ: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/models
-VS Code ચેટ: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/chat/completions
-VS Code પ્રતિસાદ: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/responses
-Ollama ટેગ્સ: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/api/tags
-Ollama ચેટ: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/api/chat
+VS Code મોડેલ્સ: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/models
+VS Code ચેટ: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/chat/completions
+VS Code પ્રતિસાદ: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/responses
+Ollama ટેગ્સ: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/api/tags
+Ollama ચેટ: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/api/chat
 ```
 
 ---

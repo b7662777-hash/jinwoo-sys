@@ -764,14 +764,14 @@ omniroute completion                   # Generuj uzupełnienie powłoki
 Przykłady gotowe do wklejenia z tokenizowanym adresem URL OmniRoute:
 
 ```txt
-Przykład tokena: sk-a3ab3c080beaee3a-69f4a4-070d71af
+Przykład tokena: sk-example-vscode-token-not-real
 
 Standardowa baza OpenAI: http://localhost:20128/v1
-Modele VS Code: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/models
-Czat VS Code: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/chat/completions
-Odpowiedzi VS Code: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/responses
-Tagi Ollama: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/api/tags
-Czat Ollama: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070d71af/api/chat
+Modele VS Code: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/models
+Czat VS Code: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/chat/completions
+Odpowiedzi VS Code: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/responses
+Tagi Ollama: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/api/tags
+Czat Ollama: http://localhost:20128/api/v1/vscode/sk-example-vscode-token-not-real/api/chat
 ```
 
 ---
