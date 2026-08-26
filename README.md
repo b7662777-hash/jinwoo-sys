@@ -1,168 +1,386 @@
 # ⚡ Jinwoo Sys
 
-> **Local-First Autonomous Multi-Agent Orchestration & Control Plane**  
-> Unified AI Gateway • Dynamic Workforce Roles • Correlated Communication Bus • Coding Agent Adapters
+> **Local-first control plane for autonomous AI coding teams.**
+>
+> Turn independent AI coding agents into a coordinated engineering workforce with roles, routing, persistent agent-to-agent communication, workspace isolation, and runtime adapters.
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Node.js](https://img.shields.io/badge/Node.js-22%2B-brightgreen.svg)](https://nodejs.org/)
+[![Status](https://img.shields.io/badge/status-active%20development-blue.svg)](#project-status)
 
 ---
 
-## 1. Overview
+## What is Jinwoo Sys?
 
-**Jinwoo Sys** is a local-first control plane and operating system for coordinating multiple autonomous AI worker roles. It decouples **high-level orchestration and role governance** from **underlying worker runtimes** and **model routing infrastructure**.
+Most AI coding tools operate as isolated sessions: one agent gets a prompt, edits a workspace, and stops.
 
-```
-                       JINWOO SYS
-                    CONTROL PLANE
-                          |
-                  Workflow Scheduler
-                          |
-             MULTI-AGENT COMMUNICATION BUS
-             (AgentMessageBus & Inboxes)
-                          |
-        ┌─────────────────┼─────────────────┐
-        |                 |                 |
-    ARCHITECT          DEVELOPER           QA
-        |                 |                 |
-   Python Worker       OpenCode        Codex / Worker
-   (Port 20129)     (v1.18.18 CLI)      (Port 20129)
-        |                 |                 |
-        └─────────────────┼─────────────────┘
-                          |
-                    Jinwoo Gateway
-                    (Port 20128/v1)
-                          |
-             OpenAI / Anthropic / Google /
-             OpenRouter / Ollama / Local
-```
+**Jinwoo Sys is the coordination layer around those agents.** It treats AI coding as a distributed engineering workflow where specialized workers can be assigned explicit roles, communicate through a correlated message bus, share bounded context, and operate against isolated workspaces while a local gateway handles model/provider routing.
 
----
+### The core idea
 
-## 2. Core Architectural Separation
-
-Jinwoo Sys enforces strict conceptual separation between four distinct layers:
-
-| Concept | Definition | Example |
-| :--- | :--- | :--- |
-| **Role** | Organizational responsibility and objective in a workflow | `ARCHITECT`, `DEVELOPER`, `QA`, `SECURITY` |
-| **Runtime** | The execution environment or CLI agent performing work | `OpenCode v1.18.18`, `Hermes Python Daemon`, `Codex` |
-| **Gateway / Router** | The local AI proxy handling rate limits, failover, and combos | `OmniRoute / Jinwoo Gateway (Port 20128)` |
-| **Model & Provider** | The upstream intelligence provider supplying inference | `Claude 3.7 Sonnet`, `GPT-4o`, `Claude Opus` via `Antigravity` |
-
-> [!IMPORTANT]
-> **Role $\neq$ Runtime $\neq$ Provider $\neq$ Model.** An OpenCode worker can be dynamically assigned to operate as a `DEVELOPER`, `FRONTEND_DEVELOPER`, or `QA` role without changing its underlying CLI execution architecture.
-
----
-
-## 3. Coding Agent Runtimes Matrix
-
-| Runtime | Status | Detection | Workspace Binding | Interactive TUI | Agent Messaging | Session Injection |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| **OpenCode** | **IMPLEMENTED & TESTED** | `opencode.cmd` (v1.18.18) | Native (`opencode.json`) | Windows Console / PTY | Correlated Bus | Injected Role Context |
-| **Hermes / Python** | **IMPLEMENTED & TESTED** | Port 20129 Daemon | Path Containment | SSE Stream | REST / SSE | Direct Prompt Dispatch |
-| **Codex** | **IMPLEMENTED & TESTED** | Node SDK Adapter | Native | Streamed | REST / SSE | Injected Task Prompt |
-| **Claude Code** | **SUPPORTED** | `claude` CLI | Native | Terminal Window | Bus Handoff | CLI Prompt Passing |
-| **OpenClaw** | **NOT INSTALLED** | `openclaw` binary | Unsupported | Unsupported | Unsupported | Unsupported |
-
----
-
-## 4. OpenCode as a Real Jinwoo Role Worker
-
-OpenCode is fully integrated as a first-class autonomous worker runtime:
-
-1. **Role Assignment**: When launching OpenCode from `/jinwoo/coding-agents` or `/jinwoo/coding-agents/opencode`, users select an explicit workforce role via the **Assign OpenCode Role** dialog.
-2. **Workspace Isolation**: Automatically generates `opencode.json` with gateway baseURL (`http://127.0.0.1:20128/api/v1`) and injects `.opencode_role_context.md` containing the assigned role instructions.
-3. **Interactive Window Binding**: Spawns an interactive Windows Console window named `OpenCode [<ROLE>] - Jinwoo Sys (<WORKSPACE>)` and tracks its process PID and session ID.
-4. **Multi-Agent Bus Integration**: Inbound handoffs (e.g. from Architect) are received as tasks; OpenCode performs real workspace actions and returns correlated review requests and final results.
-5. **Clean Termination**: Stopping a session kills the process tree, releases workspace locks, and preserves conversation history.
-
----
-
-## 5. Multi-Agent Communication Bus
-
-The Multi-Agent Communication Bus provides real, correlated, persisted, and observable messaging between workers.
-
-### Canonical Message Lifecycle States
-
-```
-CREATED ──► QUEUED ──► SENT ──► DELIVERED ──► ACKNOWLEDGED ──► PROCESSING ──► RESPONDED
-   │           │
-   └───────────┴──► CANCELLED / FAILED (with auto-retry)
+```text
+                        JINWOO SYS
+                    CONTROL PLANE / OS
+                              │
+             ┌────────────────┴────────────────┐
+             │      Workflow + Workforce      │
+             │     Scheduler + Role Policy    │
+             └────────────────┬────────────────┘
+                              │
+                   CORRELATED MESSAGE BUS
+                  Persistent inboxes + handoffs
+                              │
+        ┌─────────────────────┼─────────────────────┐
+        │                     │                     │
+    ARCHITECT              DEVELOPER               QA
+        │                     │                     │
+   Python worker          OpenCode              Codex/worker
+        │                     │                     │
+        └─────────────────────┼─────────────────────┘
+                              │
+                    Jinwoo Gateway / Router
+                              │
+      OpenAI • Anthropic • Google • OpenRouter
+                    Ollama • Local models
 ```
 
-- **`CREATED`**: Message initialized and validated with `WorkspaceGuard`.
-- **`QUEUED`**: Persisted in SQLite `agent_messages` and recipient's `agent_inboxes`.
-- **`SENT`**: Dispatched over HTTP / SSE to the target worker adapter.
-- **`DELIVERED`**: Verified that target worker runtime actively received the payload.
-- **`ACKNOWLEDGED`**: Target agent explicitly confirmed receipt (`acknowledgedAt` timestamp recorded).
-- **`RESPONDED`**: Correlated child response generated (`replyToMessageId` linked).
-- **`CANCELLED`**: Gracefully aborted on workflow cancellation without orphan processes.
+### Architectural rule
+
+**Role ≠ Runtime ≠ Provider ≠ Model**
+
+A `DEVELOPER` role may run on OpenCode today and another runtime tomorrow. The orchestration layer should not have to change just because the worker or model changes.
 
 ---
 
-## 6. Workspace Safety & Containment
+## Why it exists
 
-All file actions are strictly guarded by `WorkspaceGuard`:
-- **Path Traversal Protection**: Enforces that all file operations remain strictly inside the configured workspace root.
-- **File Locking**: Atomic file locks prevent concurrent write collisions between multiple active agents.
-- **Diff & Context Bounding**: Only relevant files, diff snippets, and summaries are propagated between handoffs, preventing token context blowout.
+Jinwoo Sys is designed around problems that appear once AI models become software workers:
+
+- How do multiple agents hand work to each other?
+- How do you correlate requests, acknowledgements, retries, and responses?
+- How do you prevent two agents from corrupting the same workspace?
+- How do you keep role definitions separate from runtime implementations?
+- How do you recover queued work when a worker is offline?
+- How do you stop a workflow without leaving orphan processes?
+- How do you route different workers through different providers without coupling orchestration to one vendor?
+
+Jinwoo Sys provides the control-plane primitives for those workflows.
 
 ---
 
-## 7. Quickstart & Development
+## What you can build
 
-### Prerequisites
-- Node.js $\ge 22.0.0$
-- Python $\ge 3.10$ (for Python worker daemon)
-- OpenCode CLI (`npm install -g opencode-ai` or local binary)
+### Autonomous coding teams
 
-### Starting the Servers
+```text
+User request
+    ↓
+Architect
+    ↓
+Developer
+    ↓
+QA
+    ↓
+Security
+    ↓
+Final result
+```
+
+### Example workloads
+
+- Feature implementation
+- Code review and refactoring
+- Bug investigation and repair
+- QA and regression validation
+- Security review
+- Architecture planning
+- Multi-step repository maintenance
+- Local/offline worker queues
+
+---
+
+## Core capabilities
+
+| Capability | What Jinwoo Sys provides |
+|---|---|
+| **Workforce roles** | Explicit responsibilities such as `ARCHITECT`, `DEVELOPER`, `QA`, and `SECURITY` |
+| **Runtime adapters** | Connect coding-agent runtimes without coupling them to the role model |
+| **Communication bus** | Correlated, persisted agent-to-agent messaging and inboxes |
+| **Workflow orchestration** | Schedule and coordinate multi-step worker execution |
+| **Gateway/router** | Local routing, provider abstraction, fallback and model selection |
+| **Workspace safety** | Path containment and file locking for concurrent workers |
+| **Bounded context** | Propagate relevant diffs/context instead of entire workspaces |
+| **Offline recovery** | Queue work for unavailable workers and recover it later |
+| **Process lifecycle** | Track sessions and cleanly terminate worker process trees |
+| **Local-first operation** | Keep orchestration and worker coordination on the local machine |
+
+---
+
+## Supported runtimes
+
+| Runtime | Status | Integration |
+|---|---:|---|
+| **OpenCode** | Implemented & tested | Role assignment, workspace binding, interactive Windows session, bus handoff, injected context |
+| **Hermes / Python worker** | Implemented & tested | Local daemon, REST/SSE dispatch, path containment |
+| **Codex adapter** | Implemented & tested | Task dispatch, streamed execution, role context |
+| **Claude Code** | Supported | CLI handoff and role context |
+| **OpenClaw** | Capability-detected | Explicitly reports unavailable when not installed |
+
+---
+
+## Multi-Agent Communication Bus
+
+The communication bus is a core system boundary rather than simple chat plumbing.
+
+### Message lifecycle
+
+```text
+CREATED
+   ↓
+QUEUED
+   ↓
+SENT
+   ↓
+DELIVERED
+   ↓
+ACKNOWLEDGED
+   ↓
+PROCESSING
+   ↓
+RESPONDED
+```
+
+Failure paths are explicit:
+
+```text
+QUEUED / SENT
+   ├──→ CANCELLED
+   └──→ FAILED → retry/recovery
+```
+
+Messages are correlated so a worker can receive a task, acknowledge it, perform work, and return a linked response rather than creating an unrelated conversation.
+
+---
+
+## Workspace safety
+
+Concurrent autonomous workers need stronger boundaries than a human-operated editor.
+
+Jinwoo Sys uses workspace guards for:
+
+- **Path traversal protection** — file actions remain inside the configured workspace root.
+- **File locking** — concurrent agents cannot silently overwrite one another's work.
+- **Bounded context propagation** — handoffs can carry relevant files/diffs/summaries instead of entire repositories.
+- **Session/workspace binding** — workers are associated with explicit workspaces.
+
+Security is a first-class design concern.
+
+---
+
+## Example workflow
+
+Suppose the user asks:
+
+> Add OAuth login to my application.
+
+A Jinwoo Sys workflow can decompose the request into role-specific work:
+
+```text
+User
+  │
+  ▼
+ARCHITECT ── design + task breakdown
+  │
+  ▼
+DEVELOPER ── implementation
+  │
+  ▼
+QA ───────── tests + regression checks
+  │
+  ▼
+SECURITY ─── audit + findings
+  │
+  ▼
+Final result
+```
+
+The important part is that each stage is a real worker interaction with explicit state and handoff semantics.
+
+---
+
+## Quick start
+
+### Requirements
+
+- Node.js `>=22.22.2 <23` or `>=24 <27`
+- Python `>=3.10` for the Python worker daemon
+- A supported coding-agent runtime such as OpenCode, Codex, or Claude Code, depending on the workflow
+
+### Install
 
 ```bash
-# 1. Install dependencies
 npm install
+```
 
-# 2. Start Python Worker Daemon (Port 20129)
+### Start the Python worker
+
+```bash
 python runtimes/jinwoo_worker_server.py
+```
 
-# 3. Start Jinwoo Sys OS & AI Gateway (Port 20128)
+### Start Jinwoo Sys
+
+```bash
 npm run dev -- -p 20128
 ```
 
-### Accessing Jinwoo Sys
-- **Main Dashboard**: [http://127.0.0.1:20128/jinwoo](http://127.0.0.1:20128/jinwoo)
-- **Multi-Agent Bus**: [http://127.0.0.1:20128/jinwoo/communication](http://127.0.0.1:20128/jinwoo/communication)
-- **OpenCode Control Panel**: [http://127.0.0.1:20128/jinwoo/coding-agents/opencode](http://127.0.0.1:20128/jinwoo/coding-agents/opencode)
-- **Workforce Roles**: [http://127.0.0.1:20128/jinwoo/workforce](http://127.0.0.1:20128/jinwoo/workforce)
-- **Active Agents**: [http://127.0.0.1:20128/jinwoo/agents](http://127.0.0.1:20128/jinwoo/agents)
+### Local interfaces
 
----
-
-## 8. Verification & Test Suite
-
-Run the full 9-suite Multi-Agent Communication Bus and OpenCode verification suite:
-
-```bash
-node scratch/run_all_bus_tests.js
+```text
+Dashboard:     http://127.0.0.1:20128/jinwoo
+Communication: http://127.0.0.1:20128/jinwoo/communication
+OpenCode:      http://127.0.0.1:20128/jinwoo/coding-agents/opencode
+Workforce:     http://127.0.0.1:20128/jinwoo/workforce
+Agents:        http://127.0.0.1:20128/jinwoo/agents
 ```
 
-### Verified Test Results (9 / 9 PASS)
-- **Test #1**: Real Agent-to-Agent Communication (Architect $\leftrightarrow$ Developer) — **PASS**
-- **Test #2**: Three-Agent Correlated Handoff (Architect $\rightarrow$ Developer $\rightarrow$ QA $\rightarrow$ Architect) — **PASS**
-- **Test #3**: Bidirectional AI Dialogue (6-turn inter-role exchange) — **PASS**
-- **Test #4**: OpenCode Worker Context Injection — **PASS**
-- **Test #5**: OpenClaw Detection & Capability Accuracy — **PASS**
-- **Test #6**: Offline Worker Queueing & Recovery — **PASS**
-- **Test #7**: Concurrent Multi-Worker Sessions with Zero Cross-Talk — **PASS**
-- **Test #8**: Workflow Cancellation & Process Cleanup — **PASS**
-- **Test #9**: OpenCode as Real Jinwoo Role Worker (E2E) — **PASS**
+> Installation and runtime commands can evolve. Prefer the repository scripts and current source tree as the source of truth.
 
 ---
 
-## 9. Troubleshooting Guide
+## Verification
 
-| Issue | Root Cause | Solution |
-| :--- | :--- | :--- |
-| **OpenCode Not Detected** | CLI executable is not on `%PATH%` | Verify `node_modules\.bin\opencode.cmd` exists or run `npm install -g opencode-ai` |
-| **Worker Offline / Queued** | Python daemon on port 20129 is not running | Start `python runtimes/jinwoo_worker_server.py` |
-| **Workspace Conflict** | Another agent currently holds a lock on the target file | Check `/jinwoo/changes` or stop the conflicting session |
-| **Gateway 500 / Refused** | Local Next.js gateway on port 20128 is not running | Run `npm run dev -- -p 20128` |
-| **Process Not Terminating** | Windows task tree lingering | Click "Stop Session" in `/jinwoo/coding-agents/opencode` |
+The repository contains extensive automated testing and validation infrastructure across API, authentication/authorization, runtime, database, security, services, UI, correctness, documentation, and related subsystems.
+
+Dedicated multi-agent/OpenCode verification scenarios cover:
+
+1. Real agent-to-agent communication
+2. Three-agent correlated handoffs
+3. Multi-turn role dialogue
+4. OpenCode worker context injection
+5. Runtime capability detection
+6. Offline worker queueing and recovery
+7. Concurrent multi-worker sessions and cross-talk isolation
+8. Workflow cancellation and process cleanup
+9. OpenCode as a Jinwoo role worker
+
+Run the repository's current test commands in your environment before claiming a deployment is verified.
+
+---
+
+## Project structure
+
+```text
+.
+├── .github/          # CI, issue/PR automation and repository workflows
+├── .husky/           # Git hooks
+├── .vale/            # Documentation/prose quality checks
+├── .vscode/          # Editor configuration
+├── @omniroute/       # Gateway/runtime package surface
+├── bin/              # CLI entry points
+├── changelog.d/      # Changelog fragments
+├── config/           # Quality/tooling configuration
+├── contrib/          # Contribution and integration material
+├── docker/           # Container assets
+├── docs/             # Documentation
+├── packages/         # Workspace packages
+├── scripts/          # Build/release/validation/development tooling
+├── src/              # Core implementation
+├── tests/            # Automated tests
+└── README.md         # Project overview
+```
+
+Directory names may evolve; this is an orientation map rather than a hard API contract.
+
+---
+
+## Development principles
+
+### Local-first
+Keep orchestration useful on a developer workstation without requiring a hosted SaaS control plane.
+
+### Runtime independence
+A workforce role should not be hard-coded to one coding-agent runtime.
+
+### Provider independence
+Routing and orchestration should not assume one model vendor.
+
+### Explicit state
+Agent communication should have observable lifecycle states rather than disappearing into ephemeral prompts.
+
+### Safe concurrency
+Autonomous workers need workspace and process boundaries that prevent accidental cross-agent interference.
+
+### Testable orchestration
+Multi-agent behavior should be verified through reproducible tests, not only screenshots or demos.
+
+---
+
+## Security
+
+Do not open public issues for undisclosed vulnerabilities. Use the repository's **Security Policy** and responsible-disclosure process for security reports.
+
+When evaluating or deploying autonomous coding agents, assume agent-generated code and tool actions are untrusted until validated. Apply least privilege to filesystem access, credentials, network access, and external tools.
+
+---
+
+## Contributing
+
+Contributions are welcome.
+
+Before opening a pull request:
+
+1. Read the contribution guidelines.
+2. Run the relevant lint and test commands.
+3. Keep architectural boundaries intact.
+4. Add or update tests for behavioral changes.
+5. Keep documentation aligned with implementation.
+6. Avoid introducing provider- or runtime-specific coupling into core orchestration.
+
+Small, focused pull requests are easier to review than large mixed-purpose changes.
+
+---
+
+## Roadmap direction
+
+Potential areas include:
+
+- More runtime adapters
+- Better workflow authoring and visualization
+- Richer observability and tracing
+- Stronger sandboxing and capability controls
+- Reproducible agent evaluation suites
+- Better local-model integration
+- Portable deployment modes
+- Shared workflow templates
+- Better first-run onboarding
+
+The roadmap should remain implementation-driven: features should solve real orchestration problems.
+
+---
+
+## Project status
+
+**Active development.**
+
+Jinwoo Sys is an evolving engineering project. APIs, runtime integrations, workflow surfaces, and internal architecture can change between releases.
+
+For the most accurate status, use the current source tree, tests, issues, pull requests, and release notes rather than relying on a static feature list.
+
+---
+
+## License
+
+Jinwoo Sys is released under the [MIT License](LICENSE).
+
+---
+
+## Why Jinwoo Sys?
+
+AI coding agents are becoming more capable. The bottleneck is increasingly **coordination**, not just model intelligence.
+
+Jinwoo Sys explores what happens when coding agents are treated like an engineering workforce:
+
+**roles, runtimes, routing, communication, workspaces, state, and verification — under one local control plane.**
+
+If that problem interests you, the repository is the place to experiment, challenge the architecture, and improve it.
