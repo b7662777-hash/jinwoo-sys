@@ -134,7 +134,7 @@ jobs:
           touch "/tmp/digests/base/${DIGEST_BASE#sha256:}"
 
       - name: Upload base digests
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: digests-base-${{ matrix.arch }}
           path: /tmp/digests/base/*
